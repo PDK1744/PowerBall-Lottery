@@ -18,17 +18,17 @@ while True:
     continue
 
   # Convert to Int
+  # Convert to Int
+  # Convert to Int
   try:
-    for i in range(5):
-      numbers[i] = int(numbers[i])
-  except:
+    numbers = [int(x) for x in numbers]
+  except ValueError:
     print('Please enter 5 numbers, separated by spaces.')
-
     continue
 
   # Make sure numbers are between 1 and 69
-  for i in numbers:
-    if not (1 <= i <+ 69):
+  for i in range(5):    
+    if not (1 <= numbers[i] <= 69):
       print('The numbers must be between 1 and 69.')
       continue 
 
@@ -38,36 +38,36 @@ while True:
     print('You must enter 5 different numbers.')
     continue
 
-  break 
+  break
 
-  ######################
+ 
 
   # Player input Powerball number
-  while True:
+while True:
     print('Enter a number from 1-26.')
     response = input('> ')
     
   # Convert to Int
-  try:
-    powerBall = int(respones)
-  except:
-    print('Please enter a number. Between 1 to 26')
-    continue
-  # Check num is between 1 and 26
-  if not (1 <= powerBall <= 26):
-    print('Powerball number must be between 1 and 26.')
-    continue 
-
-  break 
+    try:
+      powerBall = int(response)
+    except ValueError:
+      print('Please enter a number. Between 1 to 26')
+      continue
+    # Check num is between 1 and 26
+    if not (1 <= powerBall <= 26):
+      print('Powerball number must be between 1 and 26.')
+      continue 
+  
+    break 
 
   # Get number of plays
-  while True:
-    print('How many times would you like to play? (Max: 100000)')
-    response('> ')
+while True:
+  print('How many times would you like to play? (Max: 100000)')
+  response = input('> ')
   # Convert to int
   try:
     numPlays = int(response)
-  except:
+  except ValueError:
     print('Please enter a number.')
     continue 
   # Check num is between 1 - 100,000
